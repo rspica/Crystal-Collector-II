@@ -74,16 +74,15 @@ img {
 
 #gameOutCome {
 	position: absolute;
-	top: 50%;
+	top: 39%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 100%;
-	max-width: 500px;
-	font: 700 3em 'Montserrat', sans-serif;
+	font: 700 4em 'Montserrat', sans-serif;
 	letter-spacing: 2px;
 	color: rgb(209, 104, 123);
 	opacity: 1;
     animation: fadeInOut 3s linear forwards;
+    z-index: 99;
 }
 
 @media screen and (max-width: 600px) {

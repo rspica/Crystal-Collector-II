@@ -113,39 +113,33 @@ $(".crystalValue").on("click", function(){
 	clickTotal(this.getAttribute("data-crystal"));
 	audioElement.play(audioElement);
 	$(".crystalValue").html( ("<h1>" + $(this).val("data-crystal") + "</h1>"));
-})
-
-
-// use this for jQuery: $(document).on("click",  function()
+});
 
 
 // clickTotal function calcuates plaer click totals and compairs to random generated number
 function clickTotal(clickValue) {
-		console.log("i'm in clickVal")
 	clickValue = parseInt(clickValue);
 	crystalTotal = crystalTotal + clickValue;
 	$("#currectCrystalTotal").html( crystalTotal );
-console.log('crystalTotal: ' + crystalTotal)
-console.log('keyValueCompare: ' + keyValueCompare)
 	if ( crystalTotal === keyValueCompare ) {
 		$("#win").html( winCounter += 1 );
-		$("#gameOutCome").html( "W I N N E R!" );
+		$("#gameOutCome").html( "WINNER!" );
 	// Calls reset function after 3 sec
 		var timeoutId = setTimeout(function() {
 			reSet();
-		}, 3000);
+		}, 4000);
 	}
 	if (crystalTotal >= keyValueCompare ) {
 		loss.innerHTML = lossCounter += 1;
-		$("#gameOutCome").html( "Too high!" );
+		$("#gameOutCome").html( "TOO HIGH!" );
 	// Calls reset function after 3 sec
-//		var timeoutId = setTimeout(function() {
+		var timeoutId = setTimeout(function() {
 			reSet();
-//		}, 3000);
+		}, 4000);
 
 	}
 }
-});
+
 // creates a div and inserts game out comewinner or your too high
 
 
@@ -155,7 +149,6 @@ function reSet() {
 		$("#currectCrystalTotal").html( crystalTotal );
 		$("#gameOutCome").html( " " );
 		initGame();
-
-
 }
 
+});
