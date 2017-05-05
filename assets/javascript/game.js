@@ -151,16 +151,11 @@ console.log('keyValueCompare: ' + keyValueCompare)
 
 // game reset generates new random values and hold current win/loss status
 function reSet() {
-		console.log("i'm in reset")
-		console.log(keyValueCompare)
-		initGame();
-		keyValueCompare = generateRandomNumber(19,120);
-		cystalValueAssign();
-		$("#numGenerate").html( keyValueCompare );
 		crystalTotal = 0;
 		$("#currectCrystalTotal").html( crystalTotal );
 		$("#gameOutCome").html( " " );
-		console.log("i'm in reset bottom")
+		initGame();
+
 
 }
 
