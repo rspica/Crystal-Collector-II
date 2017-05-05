@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="372 0 479.9 792" enable-background="new 372 0 479.9 792" xml:space="preserve">
+<title>Artboard 1</title>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="239.5797" y1="837.7505" x2="436.5591" y2="837.7505" gradientTransform="matrix(2.0524 2.6914 -2.6914 2.0524 2219.7451 -2280.9192)">
+	<stop  offset="0" style="stop-color:#ADF6FF"/>
+	<stop  offset="0.11" style="stop-color:#A2E3F6"/>
+	<stop  offset="0.33" style="stop-color:#86B1E0"/>
+	<stop  offset="0.65" style="stop-color:#5961BC"/>
+	<stop  offset="1" style="stop-color:#230091"/>
+</linearGradient>
+<polygon opacity="0.74" fill="url(#SVGID_1_)" enable-background="new    " points="416.7,513.1 626.9,792 852,606.9 823.5,78.9 
+	566,0 372,253.5 "/>
+<g>
+	<polygon opacity="0.11" fill="#FFFFFF" enable-background="new    " points="852,606.9 658.4,581.1 626.9,792 	"/>
+	<polygon opacity="0.61" fill="#FFFFFF" enable-background="new    " points="823.5,78.9 658.4,581.1 852,606.9 	"/>
+	<polygon opacity="1.000000e-02" fill="#FFFFFF" enable-background="new    " points="416.7,513.1 658.4,581.1 626.9,792 	"/>
+	<polygon opacity="0.41" fill="#FFFFFF" enable-background="new    " points="823.5,78.9 602.9,111.4 658.4,581.1 	"/>
+	<polygon opacity="7.000000e-02" fill="#FFFFFF" enable-background="new    " points="416.7,513.1 602.9,111.4 658.4,581.1 	"/>
+	<polygon opacity="0.77" fill="#FFFFFF" enable-background="new    " points="823.5,78.9 566,0 602.9,111.4 	"/>
+	<polygon opacity="0.49" fill="#FFFFFF" enable-background="new    " points="416.7,513.1 372,253.5 566,0 602.9,111.4 	"/>
+</g>
+</svg>

@@ -1,0 +1,97 @@
+/*font-family: 'Ultra', serif;
+font-family: 'Lekton', sans-serif;
+font-family: 'Bungee Hairline', cursive;*/
+
+body {
+	text-align: center;
+	background: rgb(255, 255, 255);
+	margin: 0 auto;
+}
+
+h1 {
+	font: 2em  'Bungee Outline', cursive;
+	padding: 20px 0 10px;
+	margin-bottom: 25px;
+	color: rgb(0, 0, 0);
+}
+
+img {
+	max-height: 100px;
+}
+
+.crystalCenter {
+	width: 90%;
+	max-width: 725px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.crystal-container, .crystal-a, .crystal-b, .crystal-c, .crystal-d {
+	max-height: 300px;
+	height: 100%;
+	padding: 30px;
+	overflow: hidden;
+	padding: 50px;
+	overflow: auto;
+}
+
+.crystal-a {
+	border-bottom: 1px solid rgba(0, 0, 0, .15);
+	border-right:  1px solid rgba(0, 0, 0, .15);
+}
+
+.crystal-b {
+	border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+
+.crystal-c {
+	border-right:  1px solid rgba(0, 0, 0, .15);
+}
+
+.playerResult {
+	width: 90%;
+	max-width: 725px;
+	margin: 30px auto 60px;
+	padding: 15px 0;
+	border-top: 1px solid rgba(0, 0, 0, .15);
+	border-bottom: 1px solid rgba(0, 0, 0, .15);
+	border-radius: 5px;
+}
+
+.result {
+	text-align: left;
+	font: 300 1.3em 'Montserrat', sans-serif;
+	padding-bottom: 20px;
+	padding-right: 0;
+	color: rgba(0, 0, 0, .4);
+	max- width: 100%;
+}
+
+#numGenerate, #currectCrystalTotal {
+	font-weight: 700;
+	color: rgba(212, 131, 218, .7);
+}
+
+#gameOutCome {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 500px;
+	font: 700 3em 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+	color: rgb(209, 104, 123);
+	opacity: 1;
+    animation: fadeInOut 3s linear forwards;
+}
+
+@media screen and (max-width: 600px) {
+
+	.result {
+		text-align: left;
+		font: 300 .9em 'Montserrat', sans-serif;
+	}
+}
+	
+

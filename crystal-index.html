@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crystal Collector Game</title>
+    <!-- Botstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,semi-bold|Bungee+Outline|Bungee+Shade" rel="stylesheet">
+    <!--  <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Lekton|Ultra" rel="stylesheet">. -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/font-awesome.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 head">
+                <h1>Crystal Container</h1>
+            </div>
+        </div>
+    </div>
+    <!-- closes BS container -->
+    <div class="container">
+        <p id="gameOutCome"></p>
+        <div class="row justify-content-center crystalCenter">
+
+            <div class="col-xs-6 col-md-6 crystal-container crystal-a">
+                <img src="./assets/images/Crystal1.svg" class="crystal-1 crystalValue" alt="crystal number 1" />
+            </div>
+            <div class="col-xs-6 col-6 crystal-container crystal-b">
+                <img src="./assets/images/Crystal2.svg" class="crystal-2 crystalValue" alt="crystal number 2" />
+            </div>
+        </div>
+        <div class="row justify-content-center crystalCenter">
+            <div class="col-xs-6 col-6 crystal-container crystal-c">
+                <img src="./assets/images/Crystal3.svg" class="crystal-3 crystalValue" alt="crystal number 3" />
+            </div>
+            <div class="col-xs-6 col-md-6 crystal-container crystal-d">
+                <img src="./assets/images/Crystal4.svg" class="crystal-4 crystalValue" alt="crystal number 4" />
+            </div>
+        </div>
+    </div>
+    <div class="container playerResult">
+        <div class="row">
+            <div class="col-xs-6 col-md-6 result">Cyrstal match: <span id="numGenerate"></span></div>
+            <div class="col-xs-6 col-md-6 result">Currrent value: <span id="currectCrystalTotal"></span></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 result">wins: <span id="win"></span></div>
+            <div class="col-xs-6 col-md-6 result">losses: <span id="loss"></span></div>
+        </div>
+    </div>
+        <div class="row col-xs-6 col-md-6">
+            <div></div>
+            <div class=""></div>
+        </div>
+    
+    <!-- closes BS container -->
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./assets/javascript/game.js"></script>
+
+</html>

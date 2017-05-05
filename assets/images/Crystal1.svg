@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="367 0 490.1 792" enable-background="new 367 0 490.1 792" xml:space="preserve">
+<title>Artboard 1</title>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="111.9231" y1="559.7408" x2="49.0974" y2="663.2487" gradientTransform="matrix(3.321 0.6529 -0.6529 3.321 772.2016 -1716.1462)">
+	<stop  offset="0" style="stop-color:#FF0EF8"/>
+	<stop  offset="0.11" style="stop-color:#F021E6"/>
+	<stop  offset="0.34" style="stop-color:#C853B9"/>
+	<stop  offset="0.66" style="stop-color:#88A36F"/>
+	<stop  offset="1" style="stop-color:#3FFF1B"/>
+</linearGradient>
+<polygon fill="url(#SVGID_1_)" points="857,256.9 631.3,0 459.7,137.4 367,406.8 590.3,792 821.5,596.4 "/>
+<g>
+	<polygon opacity="0.93" fill="#FFFFFF" enable-background="new    " points="485.1,328 367,406.8 459.7,137.4 	"/>
+	<polygon opacity="0.63" fill="#FFFFFF" enable-background="new    " points="590.3,792 367,406.8 522.3,553.7 	"/>
+	<polygon opacity="0.73" fill="#FFFFFF" enable-background="new    " points="626.9,489.8 522.3,553.7 367,406.8 485.1,328 	"/>
+	<polygon opacity="0.7" fill="#FFFFFF" enable-background="new    " points="631.3,0 485.1,328 459.7,137.4 	"/>
+	<polygon opacity="0.42" fill="#FFFFFF" enable-background="new    " points="790,399 673.3,370.6 626.9,489.8 725,569.6 	"/>
+	<polygon opacity="0.58" fill="#FFFFFF" enable-background="new    " points="590.3,792 725,569.6 626.9,489.8 522.3,553.7 	"/>
+	<polygon opacity="0.15" fill="#FFFFFF" enable-background="new    " points="821.5,596.4 725,569.6 590.3,792 	"/>
+	<polygon opacity="0.2" fill="#FFFFFF" enable-background="new    " points="790,399 821.5,596.4 725,569.6 	"/>
+	<polygon opacity="0.44" fill="#FFFFFF" enable-background="new    " points="631.3,0 673.3,370.6 485.1,328 	"/>
+	<polygon opacity="0.58" fill="#FFFFFF" enable-background="new    " points="626.9,489.8 485.1,328 673.3,370.6 	"/>
+	<polygon opacity="0.32" fill="#FFFFFF" enable-background="new    " points="790,399 857,256.9 631.3,0 673.3,370.6 	"/>
+	<polygon opacity="6.000000e-02" fill="#FFFFFF" enable-background="new    " points="821.5,596.4 857,256.9 790,399 	"/>
+</g>
+</svg>
