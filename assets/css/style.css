@@ -6,6 +6,7 @@ body {
 	text-align: center;
 	background: rgb(255, 255, 255);
 	margin: 0 auto;
+	position: relative;
 }
 
 h1 {
@@ -19,11 +20,41 @@ img {
 	max-height: 100px;
 }
 
+#intro {
+	height: 94%;
+	width: 94%;
+	padding: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 94%;
+	width: 94%;
+	background: rgba(255, 255, 0, .8);
+	z-index: 999;
+	border: none;
+	text-align: left;
+	font: 700 .8em 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	color: rgb(100, 100, 100);
+	line-height: 200%;
+}
+
+.hit-start {
+	font: 700 2em 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+	color: rgb(209, 104, 123);
+	line-height: 200%;
+}
+
+#intro:focus {
+	outline:none;
+}
+
 .crystalCenter {
 	width: 90%;
 	max-width: 725px;
 	margin: 0 auto;
-	position: relative;
 }
 
 .crystal-container, .crystal-a, .crystal-b, .crystal-c, .crystal-d {
