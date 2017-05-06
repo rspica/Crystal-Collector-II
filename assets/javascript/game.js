@@ -55,11 +55,12 @@ var max = 0;
 
 
 //-------------------------------------------------------
-//----------------  **Get Variables**  ------------------
+//----------------  **Audio Elements**  ------------------
 //-------------------------------------------------------
 
-var audioElement = new Audio('./assets/sound/gottem.mp3');
-
+var clickAudio = new Audio('./assets/sound/gottem.mp3');
+var winAudio = new Audio('./assets/sound/Tada3.mp3');
+var gameOverAudio = new Audio('./assets/sound/girl-says-Game-Over.mp3');
 
 
 //---------------------------------------------------
@@ -111,7 +112,7 @@ function cystalValueAssign() {
 // event listener for clicks on the crystal passes value to clickTotal
 $(".crystalValue").on("click", function(){
 	clickTotal(this.getAttribute("data-crystal"));
-	audioElement.play(audioElement);
+	clickAudio.play(clickAudio);
 	$(".crystalValue").html( ("<h1>" + $(this).val("data-crystal") + "</h1>"));
 });
 
@@ -124,23 +125,28 @@ function clickTotal(clickValue) {
 	if ( crystalTotal === keyValueCompare ) {
 		$("#win").html( winCounter += 1 );
 		$("#gameOutCome").html( "WINNER!" );
+		winAudio.play(winAudio);
+
 	// Calls reset function after 3 sec
 		var timeoutId = setTimeout(function() {
 			reSet();
-		}, 4000);
+		}, 3000);
 	}
-	if (crystalTotal >= keyValueCompare ) {
+	if (crystalTotal > keyValueCompare ) {
 		loss.innerHTML = lossCounter += 1;
 		$("#gameOutCome").html( "TOO HIGH!" );
+		gameOverAudio.play(gameOverAudio);
+
 	// Calls reset function after 3 sec
 		var timeoutId = setTimeout(function() {
 			reSet();
-		}, 4000);
+		}, 3000);
 
 	}
 }
 
 // creates a div and inserts game out comewinner or your too high
+
 
 
 // game reset generates new random values and hold current win/loss status
