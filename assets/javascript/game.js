@@ -1,11 +1,11 @@
 // user experience
 // =================================================
-// xxx player starts game to display a random number .
-// xxx player selects one four crystals displayed.
-// xxx Each crystal has an assigned value not known to the player.
-// xxx player trys to select the right amount of crystal to match the random number total displayed
-// xxx games shows and tracks total score after each cystal is clicked
-// xxx game displays number of wins and losses
+// player starts game to display a random number .
+// player selects one four crystals displayed.
+// Each crystal has an assigned value not known to the player.
+// player trys to select the right amount of crystal to match the random number total displayed
+// games shows and tracks total score after each cystal is clicked
+// game displays number of wins and losses
 // game displays player out come: "winner" / "game over"
 // game resets with new cystal values and random guess number
 
@@ -22,6 +22,8 @@
 
 // code bonus
 // =================================================
+// add sound on crystal click event
+//	add sound on player game outcome (win/loss)
 // color change background on mouse over event
 // bounce crystals on click event
 
@@ -52,11 +54,6 @@ var min = 0;
 // minimum number value for random number generator
 var max = 0;
 
-var crystaltype = ['./assets/images/Crystal-1a.svg',
-	'./assets/images/Crystal-2a.svg',
-	'./assets/images/Crystal-3a.svg',
-	'./assets/images/Crystal-4a.svg',];
-
 //-------------------------------------------------------
 //----------------  **Audio Elements**  ------------------
 //-------------------------------------------------------
@@ -72,107 +69,94 @@ var gameOverAudio = new Audio('./assets/sound/failure2.mp3');
 
 $(document).ready(function() {
 
-// event listener for clicks on the direction panel to start the game
-$("#intro").on("click", function(){
-	$( "#intro" ).remove();
-	var timeoutId = setTimeout(function() {
-		initGame();
-	}, 1000);
-});
+    // event listener for clicks on the direction panel to start the game
+    $("#intro").on("click", function() {
+        $("#intro").remove();
+        var timeoutId = setTimeout(function() {
+            initGame();
+        }, 500);
+    });
 
+    // user clicks button to start game
+    function initGame() {
+        keyValueCompare = generateRandomNumber(19, 120);
+        cystalValueAssign();
+        $("#numGenerate").html(keyValueCompare);
+        $("#currectCrystalTotal").html(crystalTotal);
+        $("#loss").html(lossCounter);
+        $("#win").html(winCounter);
+    }
 
-//  Create a random number from 19-120 (for the crystal click total comparison)
-function generateRandomNumber(min, max) {
-	var numberGenerate = Math.floor(Math.random() * (max - min + 1)) + min;
-	return numberGenerate;
-	}
+    //  Create a random number from 19-120 (for the crystal click total comparison)
+    function generateRandomNumber(min, max) {
+        var numberGenerate = Math.floor(Math.random() * (max - min + 1)) + min;
+        return numberGenerate;
+    }
 
+    // generate random number 4x one for each cystal values
+    function cystalValueAssign() {
+        // generate random number (randomize between 1 and 12) one for each cystal values
+        var min = 1;
+        var max = 12;
+        for (i = 0; i < 4; i++) {
+            var randomNum = generateRandomNumber(min, max);
+            // moves random number and create a new data attribute for each crystal
+            // valueAdd assigns the random numbers to each of the four crystal
+            var crystalValueAdd = document.getElementsByClassName("crystalValue")[i];
+            crystalValueAdd.setAttribute("Data-crystal", randomNum);
+            console.log("this: " + this);
+            console.log("data-crystal " + randomNum);
+            crystalValue.push(randomNum);
+            console.log("crystal val " + crystalValue);
+        }
+    }
 
-// user clicks button to start game
-function initGame() {
-keyValueCompare = generateRandomNumber(19,120);
-cystalValueAssign();
-$("#numGenerate").html( keyValueCompare );
-$("#currectCrystalTotal").html( crystalTotal );
-$("#loss").html( lossCounter );
-$("#win").html( winCounter );
-}
+    // event listener for clicks on the crystal passes value to clickTotal
+    $(".crystalValue").on("click", function() {
+        clickTotal(this.getAttribute("data-crystal"));
+        clickAudio.play(clickAudio);
 
-// generate random number 4x one for each cystal values
-function cystalValueAssign() {
-// generate random number (randomize between 1 and 12) one for each cystal values
-	var min = 1;
-	var max = 12;
-	for(i = 0; i < 4; i++) {
-		var randomNum = generateRandomNumber(min, max);
-// moves random number and create a new data attribute for each crystal
-// valueAdd assigns the random numbers to each of the four crystal
-		var crystalValueAdd = document.getElementsByClassName("crystalValue")[i];
-		crystalValueAdd.setAttribute("Data-crystal", randomNum);
-		console.log("this: " + this);
-		console.log("data-crystal " + randomNum);
-		crystalValue.push(randomNum);
-		console.log("crystal val " + crystalValue);
-	}
-}
+        //display the crystals random value
+        $(".crystalValue").html(("<h1>" + $(this).val("data-crystal") + "</h1>"));
+        console.log("data inside " + $(this).val("data-crystal"));
 
-// function crystalDisplay(randomNum) {
-// 	$(".crystal-type").append('<img src=' + crystaltype + ' />');
-// 	$(".crystal-type").html(randomNum);
-// }
+    });
 
-// event listener for clicks on the crystal passes value to clickTotal
-$(".crystalValue").on("click", function(){
-	clickTotal(this.getAttribute("data-crystal"));
-	clickAudio.play(clickAudio);
+    // clickTotal function calcuates plaer click totals and compairs to random generated number
+    function clickTotal(clickValue) {
+        clickValue = parseInt(clickValue);
+        crystalTotal = crystalTotal + clickValue;
+        $("#currectCrystalTotal").html(crystalTotal);
+        if (crystalTotal === keyValueCompare) {
+            $("#win").html(winCounter += 1);
+            $("#gameOutCome").html("WINNER!");
+            winAudio.play(winAudio);
 
-//display the crystals random value
-	$(".crystalValue").html( ("<h1>" + $(this).val("data-crystal") + "</h1>"));
-	console.log("data inside " + $(this).val("data-crystal"));
-//	crystalDisplay(data-crystal);
+            // Calls reset function after 3 sec
+            var timeoutId = setTimeout(function() {
+                reSet();
+            }, 3000);
+        }
+        if (crystalTotal > keyValueCompare) {
+            loss.innerHTML = lossCounter += 1;
+            $("#gameOutCome").html("TOO HIGH!");
+            gameOverAudio.play(gameOverAudio);
 
-});
+            // Calls reset function after 3 sec
+            var timeoutId = setTimeout(function() {
+                reSet();
+            }, 2500);
 
+        }
+    }
 
-// clickTotal function calcuates plaer click totals and compairs to random generated number
-function clickTotal(clickValue) {
-	clickValue = parseInt(clickValue);
-	crystalTotal = crystalTotal + clickValue;
-	$("#currectCrystalTotal").html( crystalTotal );
-	if ( crystalTotal === keyValueCompare ) {
-		$("#win").html( winCounter += 1 );
-		$("#gameOutCome").html( "WINNER!" );
-		winAudio.play(winAudio);
-
-	// Calls reset function after 3 sec
-		var timeoutId = setTimeout(function() {
-			reSet();
-		}, 3000);
-	}
-	if (crystalTotal > keyValueCompare ) {
-		loss.innerHTML = lossCounter += 1;
-		$("#gameOutCome").html( "TOO HIGH!" );
-		gameOverAudio.play(gameOverAudio);
-
-	// Calls reset function after 3 sec
-		var timeoutId = setTimeout(function() {
-			reSet();
-		}, 3000);
-
-	}
-}
-
-// creates a div and inserts game out comewinner or your too high
-
-
-
-// game reset generates new random values and hold current win/loss status
-function reSet() {
-		crystalTotal = 0;
-		crystalValue = [];
-		$("#currectCrystalTotal").html( crystalTotal );
-		$("#gameOutCome").html( " " );
-		initGame();
-}
+    // game reset generates new random values and hold current win/loss status
+    function reSet() {
+        crystalTotal = 0;
+        crystalValue = [];
+        $("#currectCrystalTotal").html(crystalTotal);
+        $("#gameOutCome").html(" ");
+        initGame();
+    }
 
 });
