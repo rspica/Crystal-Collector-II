@@ -3,40 +3,21 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 490.1 792" style="enable-background:new 0 0 490.1 792;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
-	.st1{opacity:0.93;fill:#FFFFFF;enable-background:new    ;}
-	.st2{opacity:0.63;fill:#FFFFFF;enable-background:new    ;}
-	.st3{opacity:0.73;fill:#FFFFFF;enable-background:new    ;}
-	.st4{opacity:0.7;fill:#FFFFFF;enable-background:new    ;}
-	.st5{opacity:0.42;fill:#FFFFFF;enable-background:new    ;}
-	.st6{opacity:0.58;fill:#FFFFFF;enable-background:new    ;}
-	.st7{opacity:0.15;fill:#FFFFFF;enable-background:new    ;}
-	.st8{opacity:0.2;fill:#FFFFFF;enable-background:new    ;}
-	.st9{opacity:0.44;fill:#FFFFFF;enable-background:new    ;}
-	.st10{opacity:0.32;fill:#FFFFFF;enable-background:new    ;}
-	.st11{opacity:6.000000e-02;fill:#FFFFFF;enable-background:new    ;}
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <title>Artboard 1</title>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="62.8831" y1="26.6423" x2="5.743413e-02" y2="-76.8656" gradientTransform="matrix(3.321 0.6529 0.6529 -3.321 185.2146 263.2509)">
-	<stop  offset="0" style="stop-color:#707070"/>
-	<stop  offset="0.11" style="stop-color:#757575"/>
-	<stop  offset="0.34" style="stop-color:#818181"/>
-	<stop  offset="0.66" style="stop-color:#959595"/>
-	<stop  offset="1" style="stop-color:#ACACAC"/>
-</linearGradient>
-<polygon class="st0" points="490,256.9 264.3,0 92.7,137.4 0,406.8 223.3,792 454.5,596.4 "/>
 <g>
-	<polygon class="st1" points="118.1,328 0,406.8 92.7,137.4 	"/>
-	<polygon class="st2" points="223.3,792 0,406.8 155.3,553.7 	"/>
-	<polygon class="st3" points="259.9,489.8 155.3,553.7 0,406.8 118.1,328 	"/>
-	<polygon class="st4" points="264.3,0 118.1,328 92.7,137.4 	"/>
-	<polygon class="st5" points="423,399 306.3,370.6 259.9,489.8 358,569.6 	"/>
-	<polygon class="st6" points="223.3,792 358,569.6 259.9,489.8 155.3,553.7 	"/>
-	<polygon class="st7" points="454.5,596.4 358,569.6 223.3,792 	"/>
-	<polygon class="st8" points="423,399 454.5,596.4 358,569.6 	"/>
-	<polygon class="st9" points="264.3,0 306.3,370.6 118.1,328 	"/>
-	<polygon class="st6" points="259.9,489.8 118.1,328 306.3,370.6 	"/>
-	<polygon class="st10" points="423,399 490,256.9 264.3,0 306.3,370.6 	"/>
-	<polygon class="st11" points="454.5,596.4 490,256.9 423,399 	"/>
+	<polygon class="st0" points="118.1,327 0,405.8 92.7,136.4 	"/>
+	<polygon class="st0" points="223.3,791 0,405.8 155.3,552.7 	"/>
+	<polygon class="st0" points="259.9,488.8 155.3,552.7 0,405.8 118.1,327 	"/>
+	<polygon class="st0" points="264.3,-1 118.1,327 92.7,136.4 	"/>
+	<polygon class="st0" points="423,398 306.3,369.6 259.9,488.8 358,568.6 	"/>
+	<polygon class="st0" points="223.3,791 358,568.6 259.9,488.8 155.3,552.7 	"/>
+	<polygon class="st0" points="454.5,595.4 358,568.6 223.3,791 	"/>
+	<polygon class="st0" points="423,398 454.5,595.4 358,568.6 	"/>
+	<polygon class="st0" points="264.3,-1 306.3,369.6 118.1,327 	"/>
+	<polygon class="st0" points="259.9,488.8 118.1,327 306.3,369.6 	"/>
+	<polygon class="st0" points="423,398 490,255.9 264.3,-1 306.3,369.6 	"/>
+	<polygon class="st0" points="454.5,595.4 490,255.9 423,398 	"/>
 </g>
 </svg>

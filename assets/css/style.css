@@ -20,9 +20,15 @@ img {
     max-height: 100px;
 }
 
+.crystalValue {
+    animation: crystalBounce .7s;
+}
+
+/*-- #intro is the start button to the game -- it hold the instructional text  --*/
 #intro {
     height: 95vh;
     width: 94%;
+    margin-top: 25px;
     padding: 50px 125px;
     position: absolute;
     top: 50%;
@@ -38,12 +44,24 @@ img {
     line-height: 150%;
 }
 
+.instruction {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .hit-start {
     margin-top: 25px;
     font: 700 4em 'Montserrat', sans-serif;
     letter-spacing: 1px;
     color: rgb(200, 200, 200);
     line-height: 80%;
+}
+
+.hit-start:hover {
+    transform: scale(1.2, 1.2) 
+    color: rgb(200, 200, 200);
+    animation: startPulse 1s infinite;
 }
 
 #intro:focus {
@@ -85,20 +103,30 @@ img {
 .playerResult {
     width: 90%;
     max-width: 725px;
-    margin: 30px auto 60px;
-    padding: 15px 0;
+    margin: 60px auto 15px;
     border-top: 1px solid rgba(0, 0, 0, .15);
     border-bottom: 1px solid rgba(0, 0, 0, .15);
     border-radius: 5px;
 }
 
+#progressBar {
+    position: absolute;
+    display: none;
+    max-width: 725px;
+    height: 5px;
+    background: rgba(212, 131, 218, .7);
+    text-align: left;
+    line-height: 30px; /* To center it vertically */
+    color: rgb(150, 150, 150); 
+}
 .result {
     text-align: left;
     font: 300 1.3em 'Montserrat', sans-serif;
     padding-bottom: 20px;
     padding-right: 0;
+    margin-top: 15px;
     color: rgba(0, 0, 0, .4);
-    max- width: 100%;
+    max-width: 100%;
 }
 
 #numGenerate,
@@ -114,12 +142,22 @@ img {
     transform: translate(-50%, -50%);
     font: 700 4em 'Montserrat', sans-serif;
     letter-spacing: 2px;
-    color: rgb(209, 104, 123);
-    opacity: 1;
-    animation: fadeInOut 3s linear forwards;
+    color: rgba(212, 131, 218, .7);
     z-index: 99;
 }
 
+.crystal-type {
+    height: 90px;
+    width: 90px;
+    font: 300 .8em 'Montserrat', sans-serif;
+    padding-bottom: 20px;
+    margin: 15px 0;
+    color: rgba(212, 131, 218, .7);
+}
+
+
+
+/*-- additional small screens styles past the standard Bootstrap grid for the crystals and game stats --*/
 @media screen and (max-width: 600px) {
     .result {
         text-align: left;
@@ -127,20 +165,45 @@ img {
     }
 
     #intro {
-    height: 95vh;
-    width: 94%;
-    padding: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(255, 255, 0, .9);
-    z-index: 999;
-    border: none;
-    text-align: left;
-    font: 300 .9em 'Montserrat', sans-serif;
-    letter-spacing: 1px;
-    color: rgb(150, 150, 150);
-    line-height: 150%;
-	}
+        padding: 45px 30px;
+        position: absolute;
+    }
+
+    #gameOutCome {
+        font-size: 2em;
+    }
+}
+
+
+/*-- animation keyframes for the start page --*/
+
+@keyframes startPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*-- animation keyframes for crystal hover --*/
+@keyframes crystalBounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(.6);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
