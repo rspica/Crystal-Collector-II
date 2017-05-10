@@ -1,10 +1,7 @@
-/*font-family: 'Ultra', serif;
-font-family: 'Lekton', sans-serif;
-font-family: 'Bungee Hairline', cursive;*/
-
 body {
     text-align: center;
     background: rgb(255, 255, 255);
+    font: 300 1em 'Montserrat', sans-serif;
     margin: 0 auto;
     position: relative;
 }
@@ -20,9 +17,7 @@ img {
     max-height: 100px;
 }
 
-.crystalValue {
-    animation: crystalBounce .7s;
-}
+
 
 /*-- #intro is the start button to the game -- it hold the instructional text  --*/
 #intro {
@@ -38,7 +33,7 @@ img {
     z-index: 999;
     border: none;
     text-align: left;
-    font: 300 .9em 'Montserrat', sans-serif;
+    font-size: .9em;
     letter-spacing: 1px;
     color: rgb(150, 150, 150);
     line-height: 150%;
@@ -52,7 +47,8 @@ img {
 
 .hit-start {
     margin-top: 25px;
-    font: 700 4em 'Montserrat', sans-serif;
+    font-size: 4em;
+    font-weight: 700;
     letter-spacing: 1px;
     color: rgb(200, 200, 200);
     line-height: 80%;
@@ -109,10 +105,14 @@ img {
     border-radius: 5px;
 }
 
+.crystalBounce {
+    animation: crystalBounce .7s;
+}
+
 #progressBar {
     position: absolute;
     display: none;
-    max-width: 725px;
+    max-width: 695px;
     height: 5px;
     background: rgba(212, 131, 218, .7);
     text-align: left;
@@ -121,12 +121,15 @@ img {
 }
 .result {
     text-align: left;
-    font: 300 1.3em 'Montserrat', sans-serif;
+    font-size: 1.3em;
     padding-bottom: 20px;
     padding-right: 0;
-    margin-top: 15px;
     color: rgba(0, 0, 0, .4);
     max-width: 100%;
+}
+
+.marginTop {
+     margin-top: 35px;
 }
 
 #numGenerate,
@@ -137,7 +140,7 @@ img {
 
 #gameOutCome {
     position: absolute;
-    top: 39%;
+    top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
     font: 700 4em 'Montserrat', sans-serif;
@@ -148,11 +151,14 @@ img {
 
 .crystal-type {
     height: 90px;
-    width: 90px;
-    font: 300 .8em 'Montserrat', sans-serif;
+    font-size: .8em;
     padding-bottom: 20px;
     margin: 15px 0;
     color: rgba(212, 131, 218, .7);
+}
+
+.profile {
+    height: 100%;
 }
 
 
@@ -161,7 +167,7 @@ img {
 @media screen and (max-width: 600px) {
     .result {
         text-align: left;
-        font: 300 .9em 'Montserrat', sans-serif;
+        font-size: .9em;
     }
 
     #intro {
@@ -192,7 +198,7 @@ img {
   }
 }
 
-/*-- animation keyframes for crystal hover --*/
+/*-- animation keyframes for crystal click --*/
 @keyframes crystalBounce {
   0% {
     transform: scale(1);

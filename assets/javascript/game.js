@@ -116,15 +116,22 @@ $(document).ready(function() {
         clickTotal(this.getAttribute("data-crystal"));
         var crystalPagePosition = ($(this).attr("value"));
         var crystalCurrentVal = ($(this).attr("data-crystal"));
-console.log("this data-cystal 3:" + this.getAttribute("data-crystal")); 
         clickAudio.play(clickAudio);
-        $('.crystalValue').toggleClass('animation');
+        crystalBounce();
         gemProfile(crystalPagePosition, crystalCurrentVal);
     });
 
+    //animates crystals on click click evnet
+    function crystalBounce() {
+        $(".crystalValue").addClass('crystalBounce');
+        $('.crystalValue').on('animationend', function() {
+        $(".crystalValue").removeClass('crystalBounce')
+        });
+    }
+
     //display the crystal as wire frame and the assigned random value
     function gemProfile(crystalNum, crystalVal) {
-        var img = $('<img src="./assets/images/Crystal-' + crystalNum + 'a.svg' + '" />');
+        var img = $('<img class= "profile" src="./assets/images/Crystal-' + crystalNum + 'a.svg' + '" />');
         $('#crystal-' + crystalNum).append(img).append('<h4>' + crystalVal + '</h4>');
     }
 
@@ -135,7 +142,7 @@ console.log("this data-cystal 3:" + this.getAttribute("data-crystal"));
         crystalTotal += clickValue;
         progress(clickValue);
         $("#currectCrystalTotal").html(crystalTotal);
-        if (crystalTotal === keyValueCompare) { //evaluated for a winner
+        if (crystalTotal === keyValueCompare) { //evaluates for a winner
             $("#win").html(winCounter += 1);
             $("#gameOutCome").html("WINNER!");
             winAudio.play(winAudio);
@@ -145,7 +152,7 @@ console.log("this data-cystal 3:" + this.getAttribute("data-crystal"));
                 reset();
             }, 2500);
         }
-        if (crystalTotal > keyValueCompare) {  //evaluated for game over
+        if (crystalTotal > keyValueCompare) {  //evaluates for game over
             loss.innerHTML = lossCounter += 1;
             $("#gameOutCome").html("TOO HIGH!");
             gameOverAudio.play(gameOverAudio);
@@ -161,13 +168,16 @@ console.log("this data-cystal 3:" + this.getAttribute("data-crystal"));
     function progress(clickValue) {
         barLength += clickValue;
         progressLength = (barLength / keyValueCompare) * 695; //695 + 15px padding(L/R) 15px =725 is the max length of the stats window
+        var progressPercent = (barLength / keyValueCompare) * 100;
+        console.log(progressPercent);
         $("#progressBar").css({ 'width': progressLength + 'px', "display": "block" });
+        $("#progressValue").html('<h4>' + Math.floor(progressPercent) + '%</h4>').css("color", "rgba(212, 131, 218, .7");
     }
 
 
     // game reset generates new random values and hold current win/loss status
     function reset() {
-        progressLength = 0;
+        barLength = 0;
         crystalTotal = 0;
         crystalValue = [];
         $("#progressBar").css("display", "none");
