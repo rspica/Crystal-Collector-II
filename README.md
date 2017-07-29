@@ -2,7 +2,7 @@
 
 This is one of my first projects utilizing jQuery, event deligations
 
-<img width="250" alt="one of the four crystals" src="https://github.com/rspica/Crystal-Collector-II/blob/master/assets/images/Crystal-2.svg">
+<img width="350" alt="one of the four crystals" src="https://github.com/rspica/Crystal-Collector-II/blob/master/assets/images/Crystal-2.svg">
 
 
 ## user experience
