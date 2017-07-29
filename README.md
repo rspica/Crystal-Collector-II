@@ -1,6 +1,6 @@
 # Crystal Collector -- the game
 
-This is one of my first projects utilizing jQuery, event deligations
+This is one of my first projects utilizing html, css, javascript/jQuery, and event deligations. 
 
 <img alt="one of the four crystals" src="https://github.com/rspica/Crystal-Collector-II/blob/master/assets/images/Crystal-2.svg">
 
